@@ -1,0 +1,37 @@
+*{
+    font-family: "Gotham",  sans-serif;
+    font-weight: 500;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+#orderBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100px;
+}
+#orderForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  text-align: left;
+  gap: 10px;
+  width: 200px;
+}
+
+fieldset{
+    border-radius: 10px;
+    padding: 25px;
+}
