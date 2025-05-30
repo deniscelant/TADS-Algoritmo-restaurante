@@ -1,17 +1,16 @@
-*{
-    font-family: "Gotham",  sans-serif;
-    font-weight: 500;
+* {
+  font-family: "Gotham", sans-serif;
+  font-weight: 500;
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 #orderBox {
   display: flex;
@@ -31,7 +30,12 @@ body {
   width: 200px;
 }
 
-fieldset{
-    border-radius: 10px;
-    padding: 25px;
+fieldset {
+  border-radius: 10px;
+  padding: 25px;
+}
+
+img {
+  background-clip: contain;
+  width: 300px;
 }
