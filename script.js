@@ -61,24 +61,25 @@ if (document.title === "Checkout Restaurante") {
     document.querySelector("#plate").innerHTML = `
       <h3>${plates[plateIndex].nome}</h3>
       <img src=${plates[plateIndex].img}></img>
-      <h2 id="platePrice">R$${plates[plateIndex].price},00</h2>
+      <h2 id="platePrice">${plates[plateIndex].price}</h2>
       `;
     const payment = document.querySelector("#payment");
-    function descountPrice(){
-      const platePrice = document.querySelector("#platePrice");
-      // const numberPlatePrice = Number(platePrice.innerText)
-      // const newPlatePrice = numberPlatePrice - 15;
-      // platePrice.innerText = newPlatePrice;
-      const number = Number(platePrice.textContent)
-      platePrice.textContent = number + 1
+    function descountPrice(price){
+      const descount = 15
+      const NuNPrice = Number(price.textContent)
+      const divide = descount / 100
+      const som = divide * NuNPrice
+      price.textContent = NuNPrice - som
     }
+    const originalValue = document.querySelector("#platePrice").textContent
 
     payment.onchange = () => {
       // console.log(payment.selectedIndex)
+      const platePrice = document.querySelector("#platePrice")
       if (payment.selectedIndex == 1) {
-        descountPrice()
-      } else {
-        return
+        descountPrice(platePrice)
+      } else if(payment.selectedIndex == 0) {
+        platePrice.textContent = originalValue
       }
     };
   }
