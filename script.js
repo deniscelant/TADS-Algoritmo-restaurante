@@ -59,30 +59,39 @@ if (document.title === "Checkout Restaurante") {
 
   function checkout() {
     document.querySelector("#plate").innerHTML = `
-      <h3>${plates[plateIndex].nome}</h3>
-      <img src=${plates[plateIndex].img}></img>
-      <h2 id="platePrice">${plates[plateIndex].price}</h2>
+    <fieldset>
+    
+      <legend></legend>
+        <h1>${plates[plateIndex].nome}</h1>
+        <img src=${plates[plateIndex].img}></img>
+        
+        <div id="priceWrapper">
+          <span class="currency">R$</span>
+          <h1 id="platePrice" style="font-size:32px;">${plates[plateIndex].price}</h1>
+          <span class="zero">,00</span>
+      </div>
+
+    </fieldset>
+
       `;
     const payment = document.querySelector("#payment");
-    function descountPrice(price){
-      const descount = 15
-      const NuNPrice = Number(price.textContent)
-      const divide = descount / 100
-      const som = divide * NuNPrice
-      price.textContent = NuNPrice - som
+    function descountPrice(price) {
+      const descount = 15;
+      const NuNPrice = Number(price.textContent);
+      const divide = descount / 100;
+      const som = divide * NuNPrice;
+      price.textContent = NuNPrice - som;
     }
-    const originalValue = document.querySelector("#platePrice").textContent
+    const originalValue = document.querySelector("#platePrice").textContent;
 
     payment.onchange = () => {
       // console.log(payment.selectedIndex)
-      const platePrice = document.querySelector("#platePrice")
+      const platePrice = document.querySelector("#platePrice");
       if (payment.selectedIndex == 1) {
-        descountPrice(platePrice)
-      } else if(payment.selectedIndex == 0) {
-        platePrice.textContent = originalValue
+        descountPrice(platePrice);
+      } else if (payment.selectedIndex == 0) {
+        platePrice.textContent = originalValue;
       }
     };
   }
-
- 
 }

@@ -7,21 +7,21 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="food">
-      <h1 id="welcome"></h1>
-      <div id="plate">
-        
+    <section id="checkoutSection">
+      <div id="food">
+        <h1 id="welcome"></h1>
+        <div id="plate"></div>
       </div>
-    </div>
-    <div id="budget">
+      <div id="budget">
         <h3 id="price"></h3>
         <h3>Qual será a forma de pagamento?</h3>
-        <select id="payment" name="payment" >
-            <option value="card">Cartão</option>
-            <option value="cash">Dinheiro</option>
+        <select id="payment" name="payment">
+          <option value="card">Cartão</option>
+          <option value="cash">Dinheiro</option>
         </select>
-        <button id="makeOrder">Fazer pedido</button>
-    </div>
+        <button id="makeOrder" onclick="alert('Pedido feito!')""">Fazer pedido</button>
+      </div>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>
