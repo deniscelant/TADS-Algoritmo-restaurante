@@ -68,7 +68,6 @@ if (document.title === "Checkout Restaurante") {
         <div id="priceWrapper">
           <span class="currency">R$</span>
           <h1 id="platePrice" style="font-size:32px;">${plates[plateIndex].price}</h1>
-          <span class="zero">,00</span>
       </div>
 
     </fieldset>
